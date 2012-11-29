@@ -15,6 +15,9 @@ gem 'pg'
 gem 'thin'
 gem 'inherited_resources'
 gem 'rails_admin'
+gem 'fog'
+gem 'mini_magick'
+
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
