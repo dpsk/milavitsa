@@ -6,6 +6,7 @@ gem 'haml-rails'
 gem 'simple_form'
 gem 'carrierwave'
 gem 'fastercsv'
+gem 'devise'
 gem 'therubyracer'
 gem 'less-rails'
 gem "twitter-bootstrap-rails"
@@ -13,6 +14,7 @@ gem 'jquery-datatables-rails'
 gem 'pg'
 gem 'thin'
 gem 'inherited_resources'
+gem 'rails_admin'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -41,4 +43,6 @@ group :test do
  gem 'shoulda'
  gem 'poltergeist'
 end
+
+
 
