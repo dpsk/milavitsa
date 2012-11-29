@@ -11,5 +11,6 @@ db/dumps/
 Procfile
 dump.rdb
 public/assets/*
+public/uploads
 spec/vcr_cassettes/
 .fontconfig/*%
