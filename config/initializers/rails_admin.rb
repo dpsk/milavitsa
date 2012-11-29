@@ -54,7 +54,7 @@ RailsAdmin.config do |config|
 
   ###  Product  ###
 
-  config.model 'Product' do
+  # config.model 'Product' do
 
   #   # You can copy this to a 'rails_admin do ... end' block inside your product.rb model definition
 
@@ -67,7 +67,7 @@ RailsAdmin.config do |config|
       # configure :id, :integer
       # configure :title, :string
       # configure :description, :text
-      configure :image, :carrierwave
+      # configure :image, :carrierwave
       # configure :price, :float
       # configure :created_at, :datetime
       # configure :updated_at, :datetime
@@ -95,6 +95,22 @@ RailsAdmin.config do |config|
   #     # also see the create, update, modal and nested sections, which override edit in specific cases (resp. when creating, updating, modifying from another model in a popup modal or modifying from another model nested form)
   #     # you can override a cross-section field configuration in any section with the same syntax `configure :field_name do ... end`
   #     # using `field` instead of `configure` will exclude all other fields and force the ordering
+  # end
+
+  config.model Collection do
+    create do
+      field :name
+    end
+  end
+
+  config.model Product do
+    create do
+      field :title
+      field :description
+      field :image
+      field :price
+      field :collection
+    end
   end
 
 end

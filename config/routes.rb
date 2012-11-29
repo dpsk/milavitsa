@@ -1,4 +1,7 @@
 Milavitsa::Application.routes.draw do
+  resources :collections
+
+
   devise_for :admins
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
