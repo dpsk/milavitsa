@@ -6,7 +6,4 @@ class Product < ActiveRecord::Base
   mount_uploader :image, ImageUploader
 
   validates :title, :price, presence: true
-
-  before_save :add_tax
-
 end
