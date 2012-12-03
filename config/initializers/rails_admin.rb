@@ -107,7 +107,7 @@ RailsAdmin.config do |config|
     create do
       field :title
       field :description
-      field :image
+      field :remote_image_url
       field :price
       field :collection
     end

@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-  attr_accessible :description, :image, :price, :title, :image, :image_cache, :remove_image, :collection_id
+  attr_accessible :description, :image, :price, :title, :image, :image_cache, :remove_image, :collection_id, :remote_image_url
 
   belongs_to :collection, counter_cache: true
 
