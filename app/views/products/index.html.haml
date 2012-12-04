@@ -1,2 +1,6 @@
-%p
-  hello world
+- if collection.any?
+  - collection.each_with_index do |product, index|
+    -if index.eql?(0) or (index%3).eql?(0)
+      .row
+    .span3
+      = image_tag product.image_url(:thumb)
