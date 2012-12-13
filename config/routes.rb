@@ -6,7 +6,7 @@ Milavitsa::Application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
-  resources :products
+  resources :products, only: [:index, :show]
 
 
   # The priority is based upon order of creation:

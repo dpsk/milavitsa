@@ -1,3 +1,15 @@
 class ProductsController < ApplicationController
-  inherit_resources
+
+  def index
+    @products = Product.page(params[:page]).per(8)
+    respond_to do |format|
+      format.js
+      format.html # index.html.erb
+    end
+  end
+
+  def show
+    @product = Product.find(params[:id])
+    render "show", layout: false
+  end
 end

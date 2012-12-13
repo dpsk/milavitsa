@@ -25,23 +25,15 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand(href="#") Milavitsa
+          %a.brand(href="#{root_path}") Milavitsa
           .container.nav-collapse
             %ul.nav
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
+              %li= link_to "Наша Группа", "http://vk.com/club45084286", target: "_blank"
+              %li= link_to "Наша Страница", "http://vk.com/club45084286", target: "_blank"
+              %li= link_to "Контакты", page_path(:id => "contact")
 
     .container-fluid
-
       .row-fluid
-        .span3
-          .well.sidebar-nav
-            %ul.nav.nav-list
-              %li.nav-header Sidebar
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
         .span9
           = yield
 

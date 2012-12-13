@@ -11,6 +11,46 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require jquery.facebox
 //= require_tree .
+
+jQuery(document).ready(function($) {
+  $('a[rel*=facebox]').facebox()
+})
+
+(function() {
+  var page = 1,
+  loading = false;
+
+  function nearBottomOfPage() {
+    return $(window).scrollTop() > $(document).height() - $(window).height() - 200;
+  }
+
+  $(window).scroll(function(){
+    if (loading) {
+      return;
+    }
+
+    if(nearBottomOfPage()) {
+      loading=true;
+      page++;
+      $(".products").append("<img class='spinner' src='/assets/loading.gif'/>")
+      $.ajax({
+        url: '/products?page=' + page,
+        type: 'get',
+        dataType: 'script',
+        success: function() {
+          $('.spinner').remove()
+          $(window).sausage('draw');
+          $('a[rel*=facebox]').facebox()
+          loading=false;
+        }
+      });
+    }
+  });
+
+  $(window).sausage();
+}());
