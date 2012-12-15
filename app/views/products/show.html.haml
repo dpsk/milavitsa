@@ -1,3 +1,7 @@
 = image_tag @product.image_url
-%p== Описание: #{@product.description}
-%p== Цена: #{@product.price.to_i} гривен.
+- if @product.title
+  %p== Название: #{@product.title}
+- if @product.description
+  %p== Описание: #{@product.description}
+-if @product.price
+  %p== Цена: #{@product.price.to_i} гривен.
