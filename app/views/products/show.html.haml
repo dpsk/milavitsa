@@ -1,7 +1,7 @@
 = image_tag @product.image_url
-- if @product.title
+- if @product.title.present?
   %p== Название: #{@product.title}
-- if @product.description
+- if @product.description.present?
   %p== Описание: #{@product.description}
--if @product.price
+-if @product.price.present?
   %p== Цена: #{@product.price.to_i} гривен.
