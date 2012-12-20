@@ -20,6 +20,7 @@ gem 'mini_magick'
 gem 'kaminari'
 gem 'facebox-rails'
 gem 'high_voltage'
+gem 'rufus-scheduler'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
