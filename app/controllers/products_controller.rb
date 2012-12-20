@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
 
   def index
-    @products = Product.page(params[:page]).per(8)
+    @products = Product.page(params[:page]).per(16)
     respond_to do |format|
       format.js
       format.html # index.html.erb
